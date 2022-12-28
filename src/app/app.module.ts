@@ -9,6 +9,7 @@ import { MainComponent } from './components/main/main.component';
 import { SearchComponent } from './components/search/search.component';
 import { LoginComponent } from './components/login/login.component';
 import { UfoComponent } from './components/ufo/ufo.component';
+import { FiltersComponent } from './components/filters/filters.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { UfoComponent } from './components/ufo/ufo.component';
     MainComponent,
     SearchComponent,
     LoginComponent,
-    UfoComponent
+    UfoComponent,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,

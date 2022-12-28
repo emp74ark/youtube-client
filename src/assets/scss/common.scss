@@ -1,6 +1,7 @@
 @import './fonts.scss';
 @import './colors.scss';
 @import './buttons.scss';
+@import './input.scss';
 
 body {
   font-size: 10px;
@@ -8,4 +9,8 @@ body {
   color: $text-color-dark;
   padding: 0;
   margin: 0;
+}
+
+a {
+  color: #2F80ED;
 }

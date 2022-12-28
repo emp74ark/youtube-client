@@ -1,0 +1,16 @@
+@import '../../../assets/scss/common.scss';
+
+.filters {
+  display: flex;
+  align-items: center;
+  background-color: $background-color-middle;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  color: $text-color-middle;
+  justify-content: center;
+  gap: 1rem;
+  padding: .5rem;
+  & input {
+    @include input__common;
+  }
+}

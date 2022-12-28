@@ -14,9 +14,7 @@
 }
 
 input {
-  background: $background-color-light;
-  border: 0;
-  font-size: 1.2rem;
+  @include input__common;
   padding: .5rem;
   min-width: 20rem;
 }
