@@ -10,6 +10,7 @@ import { SearchComponent } from './components/search/search.component';
 import { LoginComponent } from './components/login/login.component';
 import { UfoComponent } from './components/ufo/ufo.component';
 import { FiltersComponent } from './components/filters/filters.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FiltersComponent } from './components/filters/filters.component';
     SearchComponent,
     LoginComponent,
     UfoComponent,
-    FiltersComponent
+    FiltersComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
