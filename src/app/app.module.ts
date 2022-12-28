@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MainComponent } from './components/main/main.component';
 import { SearchComponent } from './components/search/search.component';
 import { LoginComponent } from './components/login/login.component';
+import { UfoComponent } from './components/ufo/ufo.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LoginComponent } from './components/login/login.component';
     FooterComponent,
     MainComponent,
     SearchComponent,
-    LoginComponent
+    LoginComponent,
+    UfoComponent
   ],
   imports: [
     BrowserModule,
