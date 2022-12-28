@@ -1,33 +1,7 @@
-export interface ItemThumbnails {
-  default: {
-    url: string;
-    width: 120;
-    height: 90;
-  };
-  medium: {
-    url: string;
-    width: 320;
-    height: 180;
-  };
-  high: {
-    url: string;
-    width: 480;
-    height: 360;
-  };
-  standard: {
-    url: string;
-    width: 640;
-    height: 480;
-  };
-  maxres: {
-    url: string;
-    width: 1270;
-    height: 720;
-  };
-}
+export type Thumbnail = Record<string, {url: string; width: number; height: number;}>;
 
 export interface Item {
-  kind: 'youtube#video';
+  kind: string;
   etag: string;
   id: string;
   snippet: {
@@ -35,7 +9,7 @@ export interface Item {
     channelId: string;
     title: string;
     description: string;
-    thumbnails: ItemThumbnails;
+    thumbnails: Thumbnail;
     channelTitle: string;
     tags: string[];
     categoryId: string;
@@ -55,8 +29,8 @@ export interface Item {
   };
 }
 
-export interface ListResponse {
-  kind: 'youtube#videoListResponse';
+export interface List {
+  kind: string;
   etag: string;
   pageInfo: {
     totalResults: number;
