@@ -1,0 +1,17 @@
+.login {
+  display: flex;
+  align-items: center;
+}
+
+.login__text {
+    color:#4F4F4F;
+    font-size: 1.2rem;
+}
+
+.login__avatar {
+  background: center no-repeat url('../../../assets/user.png');
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: .5rem;
+  margin: 0 1rem;
+}
