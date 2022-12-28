@@ -1,0 +1,12 @@
+@mixin button {
+  color: #fff;
+  font-size: 1.2rem;
+  flex: none;
+  border: 0;
+  border-radius: .5rem;
+  background-color: #2F80ED;
+  box-shadow: 0 0 .2rem #2F80ED;
+  &:hover {
+    background-color: #5EA2FF;
+  }
+}

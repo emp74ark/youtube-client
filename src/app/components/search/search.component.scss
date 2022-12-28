@@ -1,3 +1,5 @@
+@import '../../../assets/scss/common.scss';
+
 .search {
   margin: auto;
   display: flex;
@@ -12,7 +14,7 @@
 }
 
 input {
-  background: #EFEFEF;
+  background: $background-color-light;
   border: 0;
   font-size: 1.2rem;
   padding: .5rem;
@@ -20,27 +22,20 @@ input {
 }
 
 .search__button {
-  background: #2F80ED;
-  border: 0;
-  border-radius: 0 .4rem .4rem 0;
-  color: #fff;
-  font-size: 1.2rem;
+  @include button;
   padding: .5rem 2.2rem;
-  box-shadow: 0 0 .2rem #2F80ED;
+  border-radius: 0 .4rem .4rem 0;
 }
 
 .logo {
   width: 5rem;
   height: 5rem;
-  background: center no-repeat url('../../../assets/logo.png');
+  background: center no-repeat url('../../../assets/icons/logo.png');
 }
 
 .settings {
   width: 2.4rem;
   height: 2.4rem;
-  background: center no-repeat url('../../../assets/settings.png') #2F80ED;
-  border: 0;
-  border-radius: .5rem;
-  flex: none;
-  box-shadow: 0 0 .2rem #2F80ED;
+  background: center no-repeat url('../../../assets/icons/settings.png');
+  @include button;
 }

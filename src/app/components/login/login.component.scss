@@ -1,15 +1,17 @@
+@import '../../../assets/scss/common.scss';
+
 .login {
   display: flex;
   align-items: center;
 }
 
 .login__text {
-    color:#4F4F4F;
+    color: $text-color-header;
     font-size: 1.2rem;
 }
 
 .login__avatar {
-  background: center no-repeat url('../../../assets/user.png');
+  background: center no-repeat url('../../../assets/icons/user.png');
   width: 2.4rem;
   height: 2.4rem;
   border-radius: .5rem;

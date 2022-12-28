@@ -1,6 +1,8 @@
+@import '../../../assets/scss/common.scss';
+
 footer {
-  background: #E5E5E5;
-  color: #929292;
+  background: $background-color-middle;
+  color: $text-color-middle;
   font-size: 1.1rem;
   display: flex;
   align-items: center;

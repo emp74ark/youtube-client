@@ -1,5 +1,7 @@
+@import '../../../assets/scss/common.scss';
+
 header {
-  background: #E5E5E5;
+  background: $background-color-middle;
   display: flex;
   align-items: center;
   justify-content: space-around;
