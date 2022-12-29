@@ -1,4 +1,4 @@
-export type Thumbnail = Record<string, {url: string; width: number; height: number;}>;
+export type Thumbnail = Record<string, { url: string; width: number; height: number; }>;
 
 export interface Item {
   kind: string;
@@ -37,4 +37,14 @@ export interface List {
     resultsPerPage: number;
   };
   items: Item[];
+}
+
+export interface IdItem {
+  id: {
+    videoId: string;
+  };
+}
+
+export interface IdList {
+  items: IdItem[];
 }

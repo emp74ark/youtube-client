@@ -1,8 +1,8 @@
 <div class="search">
-  <a href="#" class="logo"></a>
+  <a class="logo" href="#"></a>
   <div class="input-control">
-    <input type="search" name="search" id="search" placeholder="What are you want to find out?" />
-    <button class="search__button">search</button>
+    <input #search id="search" name="search" placeholder="What are you want to find out?" type="search" />
+    <button (click)="onSearch(search.value)" class="search__button">search</button>
   </div>
-  <button class="settings" (click)="onFilterSettings()"></button>
+  <button (click)="onFilterSettings()" class="settings"></button>
 </div>
