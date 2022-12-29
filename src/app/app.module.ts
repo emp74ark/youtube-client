@@ -11,6 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 import { UfoComponent } from './pages/ufo/ufo.component';
 import { FiltersComponent } from './components/filters/filters.component';
 import { CardComponent } from './components/card/card.component';
+import { DateIndicatorPipe } from './pipes/date-indicator.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CardComponent } from './components/card/card.component';
     LoginComponent,
     UfoComponent,
     FiltersComponent,
-    CardComponent
+    CardComponent,
+    DateIndicatorPipe
   ],
   imports: [
     BrowserModule,
