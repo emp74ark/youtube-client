@@ -10,6 +10,7 @@
   justify-content: center;
   gap: 1rem;
   padding: .5rem;
+
   & input {
     @include input__common;
   }

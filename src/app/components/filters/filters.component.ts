@@ -6,12 +6,13 @@ import { FiltersService } from "../../services/filters.service";
   templateUrl: "./filters.component.html",
   styleUrls: ["./filters.component.scss"]
 })
-export class FiltersComponent implements OnInit{
+export class FiltersComponent implements OnInit {
   visibility!: boolean;
 
   constructor(
     private filtersService: FiltersService
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
     this.filtersService.settings.subscribe(
