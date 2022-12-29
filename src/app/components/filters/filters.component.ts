@@ -19,4 +19,12 @@ export class FiltersComponent implements OnInit {
       value => this.visibility = value.visibility
     );
   }
+
+  onDateFilter() {
+    this.filtersService.toggleDateFilter();
+  }
+
+  onViewsFilter() {
+    this.filtersService.toggleViewsFilter();
+  }
 }

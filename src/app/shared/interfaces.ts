@@ -48,3 +48,9 @@ export interface IdItem {
 export interface IdList {
   items: IdItem[];
 }
+
+export interface FiltersState {
+  visibility: boolean;
+  date: "asc" | "desc";
+  views: "asc" | "desc";
+}
