@@ -9,6 +9,5 @@ import fakeData from '../../../assets/response.json';
 })
 export class MainComponent {
   data: List = fakeData;
-  list = this.data.items
-
+  list = this.data.items;
 }
