@@ -53,4 +53,5 @@ export interface FiltersState {
   visibility: boolean;
   date: "asc" | "desc";
   views: "asc" | "desc";
+  text: string;
 }

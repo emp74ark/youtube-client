@@ -6,7 +6,7 @@ import { FiltersState } from "../shared/interfaces";
   providedIn: "root"
 })
 export class FiltersService {
-  settings = new BehaviorSubject<FiltersState>({ visibility: false, date: "asc", views: "asc" });
+  settings = new BehaviorSubject<FiltersState>({ visibility: false, date: "asc", views: "asc", text: "" });
 
   toggleFilter() {
     const newState: FiltersState = {
@@ -28,6 +28,14 @@ export class FiltersService {
     const newState: FiltersState = {
       ...this.settings.value,
       views: this.settings.value.views === "asc" ? "desc" : "asc"
+    };
+    this.settings.next(newState);
+  }
+
+  updTextFilter(value: string) {
+    const newState: FiltersState = {
+      ...this.settings.value,
+      text: this.settings.value.text = value
     };
     this.settings.next(newState);
   }

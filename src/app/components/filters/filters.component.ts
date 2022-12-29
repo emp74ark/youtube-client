@@ -27,4 +27,8 @@ export class FiltersComponent implements OnInit {
   onViewsFilter() {
     this.filtersService.toggleViewsFilter();
   }
+
+  onTextFilter(value: string) {
+    this.filtersService.updTextFilter(value);
+  }
 }

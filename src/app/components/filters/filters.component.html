@@ -3,5 +3,5 @@
   <a href="#" (click)="onDateFilter()">date</a>
   <a href="#" (click)="onViewsFilter()">count of views</a>
   <a href="#">by word or sentence</a>
-  <input id="filter" name="filter" type="search">
+  <input id="filter" name="filter" type="search" #text (input)="onTextFilter(text.value)">
 </div>

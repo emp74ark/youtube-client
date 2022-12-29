@@ -15,6 +15,7 @@ import { DateIndicatorPipe } from "./pipes/date-indicator.pipe";
 import { HttpClientModule } from "@angular/common/http";
 import { TextTruncatePipe } from "./pipes/text-truncate.pipe";
 import { ListOrderPipe } from "./pipes/list-order.pipe";
+import { ListFilterPipe } from "./pipes/list-filter.pipe";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ListOrderPipe } from "./pipes/list-order.pipe";
     CardComponent,
     DateIndicatorPipe,
     TextTruncatePipe,
-    ListOrderPipe
+    ListOrderPipe,
+    ListFilterPipe
   ],
   imports: [
     BrowserModule,
