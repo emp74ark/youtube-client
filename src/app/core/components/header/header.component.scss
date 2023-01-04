@@ -1,0 +1,8 @@
+@import '../../../../assets/scss/common';
+
+header {
+  background: $background-color-middle;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

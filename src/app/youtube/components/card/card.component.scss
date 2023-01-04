@@ -1,0 +1,54 @@
+@import '../../../../assets/scss/common';
+
+.card {
+  width: 26rem;
+  height: 33rem;
+  background-color: $background-color-light;
+  border-radius: .5rem;
+  box-shadow: .2rem .2rem .4rem $background-color-dark;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.preview {
+  margin-top: 2.2rem;
+  width: 22rem;
+  height: 12rem;
+  background-color: $background-color-dark;
+}
+
+.title {
+  color: $text-color-header;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 20rem;
+  text-align: right;
+}
+
+.statistic {
+  display: flex;
+  width: 20rem;
+  justify-content: space-between;
+  font-size: 1.1rem;
+}
+
+.statistic__item {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+button {
+  @include button;
+  padding: .7rem 2.5rem;
+}
+
+.indicator {
+  background-color: $background-color-accent;
+  height: .5rem;
+  width: 100%;
+  border-radius: 0 0 .5rem .5rem;
+}

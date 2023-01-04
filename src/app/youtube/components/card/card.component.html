@@ -1,0 +1,24 @@
+<div class="card">
+  <img [alt]="item.snippet.title" [src]="item.snippet.thumbnails['medium'].url" class="preview">
+  <div class="statistic">
+    <div class="statistic__item">
+      <img alt="views" src="../../../../assets/icons/viewed.png">
+      <span>{{item.statistics.viewCount}}</span>
+    </div>
+    <div class="statistic__item">
+      <img alt="liked" src="../../../../assets/icons/liked.png">
+      <span>{{item.statistics.likeCount}}</span>
+    </div>
+    <div class="statistic__item">
+      <img alt="dislike" src="../../../../assets/icons/dislike.png">
+      <span>{{item.statistics.dislikeCount}}</span>
+    </div>
+    <div class="statistic__item">
+      <img alt="comments" src="../../../../assets/icons/comments.png">
+      <span>{{item.statistics.commentCount}}</span>
+    </div>
+  </div>
+  <div class="title">{{item.snippet.title | textTruncate:50 }}</div>
+  <button>more...</button>
+  <div [style]="{background: item.snippet.publishedAt | dateIndicator}" class="indicator"></div>
+</div>

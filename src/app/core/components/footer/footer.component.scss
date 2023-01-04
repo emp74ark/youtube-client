@@ -1,0 +1,11 @@
+@import '../../../../assets/scss/common';
+
+footer {
+  background: $background-color-middle;
+  color: $text-color-middle;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+}
