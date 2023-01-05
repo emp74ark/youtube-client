@@ -5,12 +5,14 @@ import { FooterComponent } from "./components/footer/footer.component";
 import { UfoComponent } from "./pages/ufo/ufo.component";
 import { YoutubeModule } from "../youtube/youtube.module";
 import { AuthModule } from "../auth/auth.module";
+import { HomeComponent } from "./pages/home/home.component";
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
-    UfoComponent
+    UfoComponent,
+    HomeComponent
   ],
   imports: [
     CommonModule,

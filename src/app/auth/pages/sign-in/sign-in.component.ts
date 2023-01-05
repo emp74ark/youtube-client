@@ -18,7 +18,7 @@ export class SignInComponent {
   onSignIn(login: string) {
     this.authService.authenticated.next(true);
     this.authService.user.next(login);
-    this.router.navigate(["/"]);
+    this.router.navigate(["/", "main"]);
   }
 
 }
