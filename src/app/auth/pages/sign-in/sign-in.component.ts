@@ -16,6 +16,7 @@ export class SignInComponent {
   }
 
   onSignIn(login: string) {
+    localStorage.setItem("user", login);
     this.authService.authenticated.next(true);
     this.authService.user.next(login);
     this.router.navigate(["/", "main"]);

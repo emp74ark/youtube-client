@@ -11,7 +11,6 @@ export class AuthService {
   signIn(user: string) {
     this.authenticated.next(true);
     this.user.next(user);
-    localStorage.setItem("user", user);
   }
 
 }
