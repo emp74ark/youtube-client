@@ -13,6 +13,7 @@ export class MainComponent implements OnInit {
 
   filters!: FiltersState;
 
+
   constructor(
     private searchService: SearchService,
     private filterService: FiltersService

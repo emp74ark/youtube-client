@@ -4,4 +4,5 @@
     *ngFor="let item of (list | listFilter: filters.text | listOrder: 'publishedAt':filters.date | listOrder: 'viewCount':filters.views)"
     [item]="item">
   </app-card>
+  <app-details></app-details>
 </div>

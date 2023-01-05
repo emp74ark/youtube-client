@@ -55,3 +55,11 @@ export interface FiltersState {
   views: "asc" | "desc";
   text: string;
 }
+
+export type ModalWindowType = "details"
+
+export interface ModalWindow {
+  visibility: boolean;
+  type?: ModalWindowType;
+  data?: any;
+}

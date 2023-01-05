@@ -19,6 +19,6 @@
     </div>
   </div>
   <div class="title">{{item.snippet.title | textTruncate:50 }}</div>
-  <button>more...</button>
+  <button (click)="onDetails()">more...</button>
   <div [style]="{background: item.snippet.publishedAt | dateIndicator}" class="indicator"></div>
 </div>

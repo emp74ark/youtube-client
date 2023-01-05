@@ -1,13 +1,13 @@
-<div class="details">
+<div *ngIf="detailsVisibility" class="details">
   <div class="details__control">
-    <button>&lt;</button>
+    <button (click)="onClose()">&lt;</button>
   </div>
   <div class="details__img">
-    <img src="../../../../assets/images/video.png" alt="Image">
+    <img [alt]="content.snippet.title" [src]="content.snippet.thumbnails['standard'].url">
   </div>
   <div class="details__text">
-    <span class="title"><h2>Title</h2></span>
-    <span class="date">2023-01-01</span>
+    <span class="title"><h2>{{content.snippet.title}}</h2></span>
+    <span class="date">{{content.snippet.publishedAt | date:'fullDate'}}</span>
     <div class="description">
       <h3>Description</h3>
       <span>Lorem ipsum dolor sit amet.</span>
@@ -15,21 +15,21 @@
     <div class="statistic">
       <div class="statistic__item">
         <img alt="views" src="../../../../assets/icons/viewed.png">
-        <span>1</span>
+        <span>{{content.statistics.viewCount}}</span>
       </div>
       <div class="statistic__item">
         <img alt="liked" src="../../../../assets/icons/liked.png">
-        <span>2</span>
+        <span>{{content.statistics.likeCount}}</span>
       </div>
       <div class="statistic__item">
         <img alt="dislike" src="../../../../assets/icons/dislike.png">
-        <span>3</span>
+        <span>{{content.statistics.dislikeCount}}</span>
       </div>
       <div class="statistic__item">
         <img alt="comments" src="../../../../assets/icons/comments.png">
-        <span>4</span>
+        <span>{{content.statistics.commentCount}}</span>
       </div>
     </div>
-    <div class="indicator"></div>
+    <div [style]="{background: content.snippet.publishedAt | dateIndicator}" class="indicator"></div>
   </div>
 </div>
