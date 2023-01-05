@@ -9,6 +9,7 @@ import { SharedModule } from "../shared/shared.module";
 import { DateIndicatorPipe } from "./pipes/date-indicator.pipe";
 import { DetailsComponent } from "./pages/details/details.component";
 import { FiltersService } from "./services/filters.service";
+import { SearchComponent } from "./components/search/search.component";
 
 
 @NgModule({
@@ -19,13 +20,15 @@ import { FiltersService } from "./services/filters.service";
     ListOrderPipe,
     ListFilterPipe,
     DateIndicatorPipe,
-    DetailsComponent
+    DetailsComponent,
+    SearchComponent
   ],
   imports: [
     CommonModule,
     SharedModule
   ],
-  providers: [FiltersService]
+  providers: [FiltersService],
+  exports: [SearchComponent]
 })
 export class YoutubeModule {
 }

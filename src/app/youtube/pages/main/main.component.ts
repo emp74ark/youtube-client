@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FiltersState, Item } from "src/app/shared/interfaces";
-import { SearchService } from "../../../core/services/search.service";
+import { SearchService } from "../../services/search.service";
 import { FiltersService } from "../../services/filters.service";
 
 @Component({
@@ -23,7 +23,6 @@ export class MainComponent implements OnInit {
     this.searchService.searchResults.subscribe(
       result => {
         this.list = result.items;
-        console.log(result.items);
       }
     );
     this.filterService.settings.subscribe(

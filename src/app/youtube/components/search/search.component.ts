@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { FiltersService } from "../../../youtube/services/filters.service";
+import { FiltersService } from "../../services/filters.service";
 import { SearchService } from "../../services/search.service";
 
 @Component({
