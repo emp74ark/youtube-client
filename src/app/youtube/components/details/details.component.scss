@@ -1,0 +1,74 @@
+@import '../../../../assets/scss/common';
+
+.details {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+
+  & button {
+    @include button;
+    border-radius: .2rem 0 0 .2rem;
+  }
+}
+
+.details__img {
+  box-shadow: .2rem .2rem .4rem $background-color-dark;
+
+  & img {
+    display: block;
+  }
+}
+
+.details__text {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0 .5rem .5rem 0;
+  box-shadow: .2rem .2rem .4rem $background-color-dark;
+  position: relative;
+}
+
+.title {
+  margin: 1.2rem 2rem;
+}
+
+.date {
+  position: absolute;
+  right: 3.5rem;
+  top: 3.5rem;
+  font-size: 1rem;
+  color: $text-color-middle;
+}
+
+.description {
+  font-size: 1.2rem;
+  padding: 0 2rem;
+  color: $text-color-middle;
+  height: calc(100% - 10.2rem);
+}
+
+.statistic {
+  display: flex;
+  width: 20rem;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  margin: 2rem;
+}
+
+.statistic__item {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.indicator {
+  background: #EB5757;
+  width: 100%;
+  height: .5rem;
+  border-radius: 0 0 .5rem 0;
+  position: absolute;
+  bottom: 0;
+}

@@ -7,7 +7,7 @@ import { ListFilterPipe } from "./pipes/list-filter.pipe";
 import { MainComponent } from "./pages/main/main.component";
 import { SharedModule } from "../shared/shared.module";
 import { DateIndicatorPipe } from "./pipes/date-indicator.pipe";
-import { DetailsComponent } from "./pages/details/details.component";
+import { DetailsComponent } from "./components/details/details.component";
 import { FiltersService } from "./services/filters.service";
 import { SearchComponent } from "./components/search/search.component";
 
