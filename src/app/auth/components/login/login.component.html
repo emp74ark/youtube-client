@@ -1,5 +1,5 @@
 <div class="login">
   <div *ngIf="!authenticated" class="login__text" (click)="onLogin()">Signin</div>
-  <div *ngIf="authenticated" class="login__text" (click)="onLogin()">{{user}}</div>
+  <div *ngIf="authenticated" class="login__text">{{user}}</div>
   <div class="login__avatar"></div>
 </div>
