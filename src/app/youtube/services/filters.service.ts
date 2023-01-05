@@ -2,9 +2,7 @@ import { Injectable } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
 import { FiltersState } from "../../shared/interfaces";
 
-@Injectable({
-  providedIn: "root"
-})
+@Injectable()
 export class FiltersService {
   settings = new BehaviorSubject<FiltersState>({ visibility: false, date: "asc", views: "asc", text: "" });
 

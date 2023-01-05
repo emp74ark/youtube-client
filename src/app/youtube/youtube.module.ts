@@ -8,6 +8,7 @@ import { MainComponent } from "./pages/main/main.component";
 import { SharedModule } from "../shared/shared.module";
 import { DateIndicatorPipe } from "./pipes/date-indicator.pipe";
 import { DetailsComponent } from "./pages/details/details.component";
+import { FiltersService } from "./services/filters.service";
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import { DetailsComponent } from "./pages/details/details.component";
     CommonModule,
     SharedModule
   ],
-  exports: []
+  providers: [FiltersService]
 })
 export class YoutubeModule {
 }
