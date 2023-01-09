@@ -1,7 +1,7 @@
 <div *ngIf="visibility" class="filters">
   <span>Sorting by:</span>
-  <a href="#" (click)="onDateFilter()">date</a>
-  <a href="#" (click)="onViewsFilter()">count of views</a>
-  <a href="#">by word or sentence</a>
+  <span class="filter" (click)="onDateFilter()">date</span>
+  <span class="filter" (click)="onViewsFilter()">count of views</span>
+  <span class="filter">by word or sentence</span>
   <input id="filter" name="filter" type="search" #text (input)="onTextFilter(text.value)">
 </div>

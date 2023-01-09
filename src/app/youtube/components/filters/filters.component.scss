@@ -15,3 +15,8 @@
     @include input__common;
   }
 }
+
+.filter {
+  color: $text-color-accent;
+  text-decoration: underline;
+}
