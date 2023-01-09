@@ -1,7 +1,7 @@
 <app-filters></app-filters>
 <div class="list">
   <app-card
-    *ngFor="let item of (list | listOrder: 'publishedAt':filters.date | listOrder: 'viewCount':filters.views | listFilter: filters.text)"
+    *ngFor="let item of (list | listFilter: filters.text | listOrder: 'publishedAt':filters.date | listOrder: 'viewCount':filters.views)"
     [item]="item">
   </app-card>
 </div>
