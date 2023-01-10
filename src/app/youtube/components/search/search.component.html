@@ -1,8 +1,15 @@
 <div class="search">
   <a class="logo" href="#"></a>
   <div class="input-control">
-    <input #search id="search" name="search" placeholder="What are you want to find out?" type="search" />
-    <button (click)="onSearch(search.value)" class="search__button">search</button>
+    <input
+      #search
+      id="search"
+      name="search"
+      placeholder="What are you want to find out?"
+      type="search"
+      (input)="onInput(search)"
+    />
+    <!--    <button (click)="onSearch(search.value)" class="search__button">search</button>-->
   </div>
   <button (click)="onFilterSettings()" class="settings"></button>
 </div>
