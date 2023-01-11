@@ -1,27 +1,62 @@
 <div class="signup">
   <h2>Registration</h2>
-  <div class="form-control">
-    <label for="name">First Name</label>
-    <input type="text" name="name" id="name">
-    <div class="validator"></div>
-  </div>
-  <div class="form-control">
-    <label for="surname">Last Name</label>
-    <input type="text" name="surname" id="surname">
-    <div class="validator"></div>
-  </div>
-  <div class="form-control">
-    <label for="mail">mail</label>
-    <input type="email" name="mail" id="mail">
-    <div class="validator"></div>
-  </div>
-  <div class="form-control">
-    <label for="password">password</label>
-    <input type="password" name="password" id="password">
-    <div class="validator"></div>
-  </div>
-  <div class="auth-mode">
-    <a routerLink="/signin">Login</a>
-    <button>Registration</button>
-  </div>
+  <form [formGroup]="form" (ngSubmit)="onsignUp()">
+    <div class="form-control">
+      <label for="name">
+        First Name
+        <span *ngIf="form.get('name')?.errors?.['required']">Please enter a name</span>
+        <span *ngIf="form.get('name')?.errors?.['minlength']">The name is too short</span>
+      </label>
+      <input type="text" name="name" id="name" formControlName="name">
+      <div
+        class="validator"
+        *ngIf="form.get('name')?.touched"
+        [style]="{background: form.get('name')?.valid | formValidator}"
+      ></div>
+    </div>
+    <div class="form-control">
+      <label for="surname">
+        Last Name
+        <span *ngIf="form.get('surname')?.errors?.['required']">Please enter a surname</span>
+        <span *ngIf="form.get('surname')?.errors?.['minlength']">The surname is too short</span>
+      </label>
+      <input type="text" name="surname" id="surname" formControlName="surname">
+      <div
+        class="validator"
+        *ngIf="form.get('surname')?.touched"
+        [style]="{background: form.get('surname')?.valid | formValidator}"
+      ></div>
+    </div>
+    <div class="form-control">
+      <label for="mail">
+        mail
+        <span *ngIf="form.get('mail')?.errors?.['required']">Please enter a email</span>
+        <span *ngIf="form.get('mail')?.errors?.['email']">The login email is invalid</span>
+      </label>
+      <input type="email" name="mail" id="mail" formControlName="mail">
+      <div
+        class="validator"
+        *ngIf="form.get('email')?.touched"
+        [style]="{background: form.get('email')?.valid | formValidator}"
+      ></div>
+    </div>
+    <div class="form-control">
+      <label for="password">
+        password
+        <span *ngIf="form.get('password')?.errors?.['required']">Please enter a password</span>
+        <span
+          *ngIf="form.get('password')?.errors?.['pattern']">Your password isn't strong enough, {{password.value | passwordChecker}}</span>
+      </label>
+      <input #password type="password" name="password" id="password" formControlName="password">
+      <div
+        class="validator"
+        *ngIf="form.get('password')?.touched"
+        [style]="{background: form.get('password')?.valid | formValidator}"
+      ></div>
+    </div>
+    <div class="auth-mode">
+      <a routerLink="/signin">Login</a>
+      <button type="submit">Registration</button>
+    </div>
+  </form>
 </div>
