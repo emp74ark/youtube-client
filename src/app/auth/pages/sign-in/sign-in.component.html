@@ -30,7 +30,7 @@
     </div>
     <div class="auth-mode">
       <a routerLink="/signup">Registration</a>
-      <button type="submit">Login</button>
+      <button [disabled]="form.invalid" type="submit">Login</button>
     </div>
   </form>
 </div>
