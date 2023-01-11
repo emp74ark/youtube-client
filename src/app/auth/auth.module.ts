@@ -7,6 +7,7 @@ import { RouterLink } from "@angular/router";
 import { ReactiveFormsModule } from "@angular/forms";
 import { FormValidatorPipe } from "./pipes/form-validator.pipe";
 import { PasswordCheckerPipe } from "./pipes/password-checker.pipe";
+import { AdminComponent } from "./pages/admin/admin.component";
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { PasswordCheckerPipe } from "./pipes/password-checker.pipe";
     SignUpComponent,
     LoginComponent,
     FormValidatorPipe,
-    PasswordCheckerPipe
+    PasswordCheckerPipe,
+    AdminComponent
   ],
   imports: [
     CommonModule,

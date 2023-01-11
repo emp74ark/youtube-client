@@ -32,4 +32,8 @@ export class LoginComponent implements OnInit {
     this.router.navigate(["/", "signin"]);
   }
 
+  onAdmin() {
+    this.router.navigate(["/", "admin"]);
+  }
+
 }

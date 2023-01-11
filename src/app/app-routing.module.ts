@@ -6,12 +6,14 @@ import { SignInComponent } from "./auth/pages/sign-in/sign-in.component";
 import { SignUpComponent } from "./auth/pages/sign-up/sign-up.component";
 import { HomeComponent } from "./core/pages/home/home.component";
 import { AuthGuard } from "./core/guards/auth.guard";
+import { AdminComponent } from "./auth/pages/admin/admin.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "main", component: MainComponent, canActivate: [AuthGuard] },
   { path: "signin", component: SignInComponent },
   { path: "signup", component: SignUpComponent },
+  { path: "admin", component: AdminComponent, canActivate: [AuthGuard] },
   { path: "**", component: UfoComponent }
 ];
 

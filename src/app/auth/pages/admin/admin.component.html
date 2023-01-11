@@ -1,0 +1,73 @@
+<div class="admin">
+  <h2>Registration</h2>
+  <form [formGroup]="form" (ngSubmit)="onCreate()">
+    <div class="form-control">
+      <label for="title">
+        Title
+        <span *ngIf="form.get('title')?.errors?.['required']">Please enter a title</span>
+        <span *ngIf="form.get('title')?.errors?.['minlength']">The name is too short</span>
+        <span *ngIf="form.get('title')?.errors?.['maxlength']">The name is too long</span>
+      </label>
+      <input type="text" name="title" id="title" formControlName="title">
+      <div
+        class="validator"
+        *ngIf="form.get('title')?.touched"
+        [style]="{background: form.get('title')?.valid | formValidator}"
+      ></div>
+    </div>
+    <div class="form-control">
+      <label for="description">
+        Description
+        <span *ngIf="form.get('description')?.errors?.['maxlength']">The description is too long</span>
+      </label>
+      <input type="text" name="description" id="description" formControlName="description">
+      <div
+        class="validator"
+        *ngIf="form.get('description')?.touched"
+        [style]="{background: form.get('description')?.valid | formValidator}"
+      ></div>
+    </div>
+    <div class="form-control">
+      <label for="img">
+        Link to the image cover
+        <span *ngIf="form.get('img')?.errors?.['required']">Please enter a link to the image</span>
+        <span *ngIf="form.get('img')?.errors?.['pattern']">The image link is invalid</span>
+      </label>
+      <input type="text" name="img" id="img" formControlName="img">
+      <div
+        class="validator"
+        *ngIf="form.get('img')?.touched"
+        [style]="{background: form.get('img')?.valid | formValidator}"
+      ></div>
+    </div>
+    <div class="form-control">
+      <label for="video">
+        Link to the video
+        <span
+          *ngIf="form.get('video')?.errors?.['pattern']">The video link is invalid</span>
+      </label>
+      <input #password type="text" name="video" id="video" formControlName="video">
+      <div
+        class="validator"
+        *ngIf="form.get('video')?.touched"
+        [style]="{background: form.get('video')?.valid | formValidator}"
+      ></div>
+    </div>
+    <div class="form-control">
+      <label for="date">
+        Creation date
+        <span
+          *ngIf="form.get('date')?.errors?.['required']">Please enter a creation date</span>
+      </label>
+      <input type="date" name="date" id="date" formControlName="date">
+      <div
+        class="validator"
+        *ngIf="form.get('date')?.touched"
+        [style]="{background: form.get('date')?.valid | formValidator}"
+      ></div>
+    </div>
+    <div class="buttons">
+      <button [disabled]="form.invalid" type="submit">Create card</button>
+    </div>
+  </form>
+</div>
