@@ -11,4 +11,7 @@
   font-size: 1.2rem;
   padding: 0 .5rem;
   height: 2.8rem;
+  &:focus {
+    outline: none;
+  }
 }
