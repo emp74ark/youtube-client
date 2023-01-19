@@ -63,3 +63,12 @@ export interface ModalWindow {
   type?: ModalWindowType;
   data?: any;
 }
+
+export interface Card {
+  id?: number;
+  title: string;
+  description: string;
+  img: string;
+  video: string;
+  date: string;
+}

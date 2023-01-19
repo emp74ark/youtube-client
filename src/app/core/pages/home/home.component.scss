@@ -1,0 +1,32 @@
+@import '../../../../assets/scss/common';
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+}
+
+.personal-card {
+  display: flex;
+  flex-direction: column;
+  width: 26rem;
+  height: 33rem;
+  background-color: $background-color-light;
+  border-radius: .5rem;
+  box-shadow: .2rem .2rem .4rem $background-color-dark;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 1.4rem;
+
+  img {
+    width: 22rem;
+  }
+}
+
+.title {
+  color: $text-color-header;
+  font-size: 1.6rem;
+  font-weight: 700;
+  width: 20rem;
+}

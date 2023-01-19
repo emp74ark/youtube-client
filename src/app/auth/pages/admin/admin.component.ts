@@ -1,5 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { State } from "../../../redux/state.model";
+import { Store } from "@ngrx/store";
+import { addNewCard } from "../../../redux/actions/card.actions";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-admin",
@@ -10,7 +14,9 @@ export class AdminComponent implements OnInit {
   form!: FormGroup;
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private store: Store<State>,
+    private router: Router
   ) {
   }
 
@@ -29,7 +35,7 @@ export class AdminComponent implements OnInit {
   }
 
   onCreate() {
-    const { title, description, img, video, date } = this.form.value;
-    console.log(title, description, img, video, date);
+    this.store.dispatch(addNewCard({ payload: this.form.value }));
+    this.router.navigate(["/"]);
   }
 }

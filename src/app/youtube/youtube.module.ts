@@ -10,6 +10,7 @@ import { DateIndicatorPipe } from "./pipes/date-indicator.pipe";
 import { DetailsComponent } from "./components/details/details.component";
 import { FiltersService } from "./services/filters.service";
 import { SearchComponent } from "./components/search/search.component";
+import { RouterLink } from "@angular/router";
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { SearchComponent } from "./components/search/search.component";
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    RouterLink
   ],
   providers: [FiltersService],
   exports: [SearchComponent]

@@ -1,1 +1,10 @@
-<h1>Welcome</h1>
+<h1>Personal cards</h1>
+<div class="cards-container">
+  <div *ngFor="let card of data$ | async" class="personal-card">
+    <span class="title">Title: {{card.title}}</span>
+    <span>Description: {{card.description}}</span>
+    <img [src]="card.img" [alt]="card.title">
+    <a [href]="card.video" target="_blank">Link to video</a>
+    <span>Date: {{card.date}}</span>
+  </div>
+</div>

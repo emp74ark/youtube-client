@@ -8,6 +8,8 @@ import { CoreModule } from "./core/core.module";
 import { YoutubeModule } from "./youtube/youtube.module";
 import { AuthModule } from "./auth/auth.module";
 import { AuthInterceptor } from "./auth/services/auth.interceptor";
+import { StoreModule } from "@ngrx/store";
+import { reducers } from "./redux/state.model";
 
 const AUTH_INTERCEPTOR: Provider = {
   provide: HTTP_INTERCEPTORS,
@@ -25,7 +27,8 @@ const AUTH_INTERCEPTOR: Provider = {
     AppRoutingModule,
     CoreModule,
     YoutubeModule,
-    AuthModule
+    AuthModule,
+    StoreModule.forRoot(reducers)
   ],
   providers: [AUTH_INTERCEPTOR],
   bootstrap: [AppComponent]
