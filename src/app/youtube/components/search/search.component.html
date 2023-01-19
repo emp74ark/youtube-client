@@ -1,5 +1,5 @@
 <div class="search">
-  <a class="logo" routerLink="/"></a>
+  <a class="logo" routerLink="/main"></a>
   <div class="input-control">
     <input
       #search
@@ -9,7 +9,6 @@
       type="search"
       (input)="onInput(search)"
     />
-    <!--    <button (click)="onSearch(search.value)" class="search__button">search</button>-->
   </div>
   <button (click)="onFilterSettings()" class="settings"></button>
 </div>
