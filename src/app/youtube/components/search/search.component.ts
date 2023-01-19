@@ -2,6 +2,9 @@ import { Component } from "@angular/core";
 import { FiltersService } from "../../services/filters.service";
 import { SearchService } from "../../services/search.service";
 import { debounceTime, fromEvent } from "rxjs";
+import { State } from "../../../redux/state.model";
+import { Store } from "@ngrx/store";
+import { youtubeSearch } from "../../../redux/actions/youtube.actions";
 
 @Component({
   selector: "app-search",
@@ -12,17 +15,14 @@ export class SearchComponent {
 
   constructor(
     private filterService: FiltersService,
-    public searchService: SearchService
+    public searchService: SearchService,
+    private store: Store<State>
   ) {
   }
 
   onFilterSettings() {
     this.filterService.toggleFilter();
   }
-
-  // onSearch(value: string) {
-  //   if (value.trim()) this.searchService.search(value);
-  // }
 
   onInput(input: HTMLInputElement) {
     fromEvent(input, "input")
@@ -32,7 +32,10 @@ export class SearchComponent {
       .subscribe(
         result => {
           const { value } = result.target as HTMLInputElement;
-          if (value.trim().length >= 3) this.searchService.search(value);
+          if (value.trim().length >= 3) {
+            this.searchService.search(value);
+            this.store.dispatch(youtubeSearch());
+          }
         }
       );
   }

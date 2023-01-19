@@ -1,7 +1,10 @@
 import { Component, OnInit } from "@angular/core";
 import { FiltersState, Item } from "src/app/shared/interfaces";
-import { SearchService } from "../../services/search.service";
 import { FiltersService } from "../../services/filters.service";
+import { Store } from "@ngrx/store";
+import { State } from "../../../redux/state.model";
+import { Observable } from "rxjs";
+import { searchResultsList } from "../../../redux/selectors/youtube.selector";
 
 @Component({
   selector: "app-main",
@@ -9,23 +12,19 @@ import { FiltersService } from "../../services/filters.service";
   styleUrls: ["./main.component.scss"]
 })
 export class MainComponent implements OnInit {
-  list: Item[] = [];
+  data$: Observable<Item[]>;
 
   filters!: FiltersState;
 
 
   constructor(
-    private searchService: SearchService,
-    private filterService: FiltersService
+    private filterService: FiltersService,
+    private store: Store<State>
   ) {
+    this.data$ = this.store.select(searchResultsList);
   }
 
   ngOnInit() {
-    this.searchService.searchResults.subscribe(
-      result => {
-        this.list = result.items;
-      }
-    );
     this.filterService.settings.subscribe(
       state => this.filters = state
     );
