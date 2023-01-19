@@ -12,6 +12,7 @@ import { StoreModule } from "@ngrx/store";
 import { reducers } from "./redux/state.model";
 import { EffectsModule } from "@ngrx/effects";
 import { YoutubeEffects } from "./redux/effects/youtube.effects";
+import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 
 const AUTH_INTERCEPTOR: Provider = {
   provide: HTTP_INTERCEPTORS,
@@ -31,7 +32,8 @@ const AUTH_INTERCEPTOR: Provider = {
     YoutubeModule,
     AuthModule,
     StoreModule.forRoot(reducers),
-    EffectsModule.forRoot([YoutubeEffects])
+    EffectsModule.forRoot([YoutubeEffects]),
+    StoreDevtoolsModule.instrument()
   ],
   providers: [AUTH_INTERCEPTOR],
   bootstrap: [AppComponent]
